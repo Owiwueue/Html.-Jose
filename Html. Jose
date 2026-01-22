@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaModa</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+    body{background:#f5f5f5;color:#333}
+    header{background:#111;color:#fff;padding:20px}
+    nav{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:auto}
+    nav h1{font-size:22px;letter-spacing:1px}
+    nav ul{list-style:none;display:flex;gap:18px}
+    nav ul li a{color:#fff;text-decoration:none;font-size:14px}
+    nav ul li a:hover{text-decoration:underline}
+
+    .hero{background:#ddd url('https://via.placeholder.com/1400x500') center/cover no-repeat;padding:100px 20px;text-align:center}
+    .hero h2{font-size:36px;margin-bottom:15px}
+    .hero p{font-size:18px;margin-bottom:25px}
+    .hero a{background:#111;color:#fff;padding:12px 25px;text-decoration:none;border-radius:4px}
+
+    section{padding:60px 20px;max-width:1100px;margin:auto}
+    section h3{text-align:center;font-size:26px;margin-bottom:40px}
+
+    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
+    .product{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.1)}
+    .product img{width:100%;height:300px;object-fit:cover}
+    .product div{padding:15px}
+    .product h4{margin-bottom:8px}
+    .product p{font-size:14px;color:#666}
+    .product span{display:block;margin-top:10px;font-weight:bold}
+
+    .about{background:#fff;border-radius:8px;padding:30px;box-shadow:0 5px 15px rgba(0,0,0,0.1)}
+    .about p{line-height:1.6;font-size:15px}
+
+    form{background:#fff;padding:30px;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,0.1)}
+    form input,form textarea{width:100%;padding:12px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px}
+    form button{background:#111;color:#fff;border:none;padding:12px 20px;border-radius:4px;cursor:pointer}
+
+    footer{background:#111;color:#fff;padding:25px;text-align:center;margin-top:60px}
+    footer p{font-size:13px;opacity:0.8}
+
+    @media(max-width:600px){
+      .hero h2{font-size:28px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1>NovaModa</h1>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#ropa">Ropa</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+  <h2>Moda que te define</h2>
+  <p>Ropa hermosa, moderna y accesible</p>
+  <a href="#ropa">Ver colección</a>
+</section>
+
+<section id="ropa">
+  <h3>Nuestra Ropa</h3>
+  <div class="products">
+    <div class="product">
+      <img src="https://static.wixstatic.com/media/41a80e_6b0ea7934174410cb3d0a5fd5ba85c36~mv2.jpg/v1/fill/w_380,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/41a80e_6b0ea7934174410cb3d0a5fd5ba85c36~mv2.jpg" alt="Producto">
+      <div>
+        <h4>Vestido elegante</h4>
+        <p>Ideal para toda ocasión</p>
+        <span>$25</span>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://static.wixstatic.com/media/nsplsh_54532d2d754e772d4a7145~mv2_d_4032_3024_s_4_2.jpg/v1/fill/w_600,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/nsplsh_54532d2d754e772d4a7145~mv2_d_4032_3024_s_4_2.jpg" alt="Producto">
+      <div>
+        <h4>Blusa moderna</h4>
+        <p>Comodidad y estilo</p>
+        <span>$15</span>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://static.wixstatic.com/media/41a80e_d3b18006413c47c5b86d406864014a62~mv2.jpg/v1/fill/w_278,h_369,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/41a80e_d3b18006413c47c5b86d406864014a62~mv2.jpg" alt="Producto">
+      <div>
+        <h4>Pantalón casual</h4>
+        <p>Perfecto para diario</p>
+        <span>$20</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros">
+  <h3>Sobre Nosotros</h3>
+  <div class="about">
+    <p>NovaModa nace con la idea de ofrecer ropa moderna, cómoda y accesible para todos. Nuestro objetivo es que cada persona encuentre prendas que reflejen su estilo y personalidad, siempre con la mejor calidad y atención.</p>
+  </div>
+</section>
+
+<section id="contacto">
+  <h3>Contacto</h3>
+  <form>
+    <input type="text" placeholder="Nombre" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <textarea rows="4" placeholder="Mensaje"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 NovaModa · Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaModa</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+    body{background:#f5f5f5;color:#333}
+    header{background:#111;color:#fff;padding:20px}
+    nav{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:auto}
+    nav h1{font-size:22px;letter-spacing:1px}
+    nav ul{list-style:none;display:flex;gap:18px}
+    nav ul li a{color:#fff;text-decoration:none;font-size:14px}
+    nav ul li a:hover{text-decoration:underline}
+
+    .hero{background:#ddd url('https://via.placeholder.com/1400x500') center/cover no-repeat;padding:100px 20px;text-align:center}
+    .hero h2{font-size:36px;margin-bottom:15px}
+    .hero p{font-size:18px;margin-bottom:25px}
+    .hero a{background:#111;color:#fff;padding:12px 25px;text-decoration:none;border-radius:4px}
+
+    section{padding:60px 20px;max-width:1100px;margin:auto}
+    section h3{text-align:center;font-size:26px;margin-bottom:40px}
+
+    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
+    .product{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.1)}
+    .product img{width:100%;height:300px;object-fit:cover}
+    .product div{padding:15px}
+    .product h4{margin-bottom:8px}
+    .product p{font-size:14px;color:#666}
+    .product span{display:block;margin-top:10px;font-weight:bold}
+
+    .about{background:#fff;border-radius:8px;padding:30px;box-shadow:0 5px 15px rgba(0,0,0,0.1)}
+    .about p{line-height:1.6;font-size:15px}
+
+    form{background:#fff;padding:30px;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,0.1)}
+    form input,form textarea{width:100%;padding:12px;margin-bottom:15px;border:1px solid #ccc;border-radius:4px}
+    form button{background:#111;color:#fff;border:none;padding:12px 20px;border-radius:4px;cursor:pointer}
+
+    footer{background:#111;color:#fff;padding:25px;text-align:center;margin-top:60px}
+    footer p{font-size:13px;opacity:0.8}
+
+    @media(max-width:600px){
+      .hero h2{font-size:28px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1>NovaModa</h1>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#ropa">Ropa</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+  <h2>Moda que te define</h2>
+  <p>Ropa hermosa, moderna y accesible</p>
+  <a href="#ropa">Ver colección</a>
+</section>
+
+<section id="ropa">
+  <h3>Nuestra Ropa</h3>
+  <div class="products">
+    <div class="product">
+      <img src="https://static.wixstatic.com/media/41a80e_6b0ea7934174410cb3d0a5fd5ba85c36~mv2.jpg/v1/fill/w_380,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/41a80e_6b0ea7934174410cb3d0a5fd5ba85c36~mv2.jpg" alt="Producto">
+      <div>
+        <h4>Vestido elegante</h4>
+        <p>Ideal para toda ocasión</p>
+        <span>$25</span>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://static.wixstatic.com/media/nsplsh_54532d2d754e772d4a7145~mv2_d_4032_3024_s_4_2.jpg/v1/fill/w_600,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/nsplsh_54532d2d754e772d4a7145~mv2_d_4032_3024_s_4_2.jpg" alt="Producto">
+      <div>
+        <h4>Blusa moderna</h4>
+        <p>Comodidad y estilo</p>
+        <span>$15</span>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://static.wixstatic.com/media/41a80e_d3b18006413c47c5b86d406864014a62~mv2.jpg/v1/fill/w_278,h_369,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/41a80e_d3b18006413c47c5b86d406864014a62~mv2.jpg" alt="Producto">
+      <div>
+        <h4>Pantalón casual</h4>
+        <p>Perfecto para diario</p>
+        <span>$20</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros">
+  <h3>Sobre Nosotros</h3>
+  <div class="about">
+    <p>NovaModa nace con la idea de ofrecer ropa moderna, cómoda y accesible para todos. Nuestro objetivo es que cada persona encuentre prendas que reflejen su estilo y personalidad, siempre con la mejor calidad y atención.</p>
+  </div>
+</section>
+
+<section id="contacto">
+  <h3>Contacto</h3>
+  <form>
+    <input type="text" placeholder="Nombre" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <textarea rows="4" placeholder="Mensaje"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 NovaModa · Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
